@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jane Baidoo Montessori School nurtures curious, confident, and kind learners.">
+    <title>Jane Baidoo Montessori School</title>
+    <style>
+        :root {
+            --forest: #941984ef;
+            --leaf: #3a493a;
+            --sun: #837c75d2;
+            --cream: #c2beb4;
+            --ink: #26332f;
+            --muted: #64736d;
+            --line: #d9e4d9;
+        }
+
+        * { box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            margin: 0;
+            background: var(--cream);
+            color: var(--ink);
+            font-family: Georgia, "Times New Roman", serif;
+            line-height: 1.6;
+        }
+
+        .site-header {
+            background: var(--forest);
+            color: white;
+            padding: 1rem 6vw;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.5rem;
+        }
+
+        .brand { margin: 0; font-size: clamp(1.1rem, 2vw, 1.55rem); }
+        .brand span { color: var(--sun); }
+
+        nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.4rem;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a { color: white; text-decoration: none; font-weight: bold; }
+        nav a:hover, nav a:focus { color: var(--sun); }
+
+        .hero {
+            min-height: 570px;
+            padding: 6rem 6vw;
+            display: grid;
+            grid-template-columns: minmax(260px, 0.9fr) minmax(320px, 1.1fr);
+            align-items: center;
+            gap: 4rem;
+            background: #e7f0e3;
+        }
+
+        .eyebrow { color: var(--leaf); font-weight: bold; letter-spacing: .08em; text-transform: uppercase; }
+        h1, h2 { line-height: 1.1; color: var(--forest); }
+        h1 { font-size: clamp(2.6rem, 6vw, 5rem); margin: .5rem 0 1.2rem; }
+        h2 { font-size: clamp(1.8rem, 3vw, 2.6rem); margin-top: 0; }
+        .hero p { max-width: 34rem; color: var(--muted); font-size: 1.15rem; }
+        .hero-slideshow { min-width: 0; }
+        .hero-image { display: block; width: 100%; height: 520px; object-fit: cover; border-radius: 48% 48% 12px 12px; box-shadow: 18px 18px 0 var(--sun); }
+        .slideshow-controls { display: flex; align-items: center; justify-content: center; gap: 1rem; margin-top: 1.5rem; }
+        .slideshow-controls button { border: 1px solid var(--forest); background: transparent; color: var(--forest); padding: .5rem .8rem; font: inherit; font-weight: bold; cursor: pointer; }
+        .slideshow-controls button:hover, .slideshow-controls button:focus-visible { background: var(--forest); color: white; }
+        .slide-status { min-width: 5rem; text-align: center; color: var(--ink); }
+
+        .content { max-width: 1100px; margin: 0 auto; padding: 5rem 6vw; }
+        .about { display: grid; grid-template-columns: 1fr 1.5fr; gap: 4rem; align-items: start; }
+        .about p { color: var(--muted); margin-top: 0; }
+        .values { display: flex; flex-wrap: wrap; gap: .7rem; margin-top: 1.5rem; }
+        .value { background: #e0ecdd; border-left: 4px solid var(--leaf); padding: .55rem .8rem; font-weight: bold; }
+
+        .records { background: white; border-top: 1px solid var(--line); }
+        .table-wrap { overflow-x: auto; }
+        table { width: 100%; border-collapse: collapse; text-align: left; min-width: 520px; }
+        caption { text-align: left; color: var(--muted); margin-bottom: 1rem; }
+        th { background: var(--forest); color: white; }
+        th, td { padding: 1rem 1.2rem; border-bottom: 1px solid var(--line); }
+        tbody tr:nth-child(even) { background: #f4f8f1; }
+        tbody tr:hover { background: #fff4d9; }
+
+        .contact { background: var(--sun); text-align: center; }
+        .contact h2 { margin-bottom: .5rem; }
+        .contact p { margin: .25rem 0; }
+        .contact a { color: var(--forest); font-weight: bold; }
+        footer { background: var(--forest); color: #dce9d9; text-align: center; padding: 1.5rem 6vw; }
+
+        @media (max-width: 720px) {
+            .site-header { align-items: flex-start; flex-direction: column; }
+            .hero { grid-template-columns: 1fr; padding-top: 4rem; gap: 2rem; }
+            .hero-image { height: min(105vw, 420px); border-radius: 38% 38% 12px 12px; box-shadow: 10px 10px 0 var(--sun); }
+            .about { grid-template-columns: 1fr; gap: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <p class="brand">Jane Baidoo Memorial School</p>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div>
+                <p class="eyebrow">A joyful place to grow</p>
+                <h1>Big curiosity starts here.</h1>
+                <p>Welcome to a warm Memorial community where children learn at their own pace, build independence, and discover the world with confidence.</p>
+            </div>
+            <div class="hero-slideshow" aria-label="School photo slideshow">
+                <img class="hero-image" src="JBMS%201.jpeg" alt="JBMS school photo 1">
+                <div class="slideshow-controls">
+                    <button type="button" id="previous-slide" aria-label="Show previous photo">Previous</button>
+                    <span class="slide-status" id="slide-status" aria-live="polite">1 of 3</span>
+                    <button type="button" id="next-slide" aria-label="Show next photo">Next</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="content about" id="about">
+            <div>
+                <p class="eyebrow">Our approach</p>
+                <h2>Learning with purpose and wonder.</h2>
+            </div>
+            <div>
+                <p>Jane Baidoo Memorial School gives every learner the freedom to explore within a thoughtful, prepared environment. Our guides encourage practical skills, meaningful collaboration, and a lifelong love of learning.</p>
+                <div class="values" aria-label="School values">
+                    <span class="value">Respect</span>
+                    <span class="value">Independence</span>
+                    <span class="value">Curiosity</span>
+                    <span class="value">Passion</span>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <div class="content">
+                <p class="eyebrow">Come say hello</p>
+                <h2>Let’s grow together.</h2>
+                <p>Questions about enrollment or our learning community,
+                     contact us on
+                </p>
+                <p><a href="mailto:admin@jbm.edu.gh">Email: admin@jbm.edu.gh</a> or <a href="tel:+233546229459">Tel: +233 54 622 9459</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer><small>&copy; 2026 Jane Baidoo Montessori School. Nurturing confident learners.</small></footer>
+    <script>
+        const slides = [
+            { src: "JBMS%201.jpeg", alt: "JBMS school photo 1" },
+            { src: "JBMS%202.jpeg", alt: "JBMS school photo 2" },
+            { src: "JBMS%203.jpeg", alt: "JBMS school photo 3" },
+            { src: "JBMS%204.jpeg", alt: "JBMS school photo 4" }
+        ];
+        const slideshowImage = document.querySelector(".hero-image");
+        const slideStatus = document.querySelector("#slide-status");
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            currentSlide = (index + slides.length) % slides.length;
+            slideshowImage.src = slides[currentSlide].src;
+            slideshowImage.alt = slides[currentSlide].alt;
+            slideStatus.textContent = `${currentSlide + 1} of ${slides.length}`;
+        }
+
+        document.querySelector("#previous-slide").addEventListener("click", () => showSlide(currentSlide - 1));
+        document.querySelector("#next-slide").addEventListener("click", () => showSlide(currentSlide + 1));
+        window.setInterval(() => showSlide(currentSlide + 1), 5000);
+    </script>
+</body>
+</html>
