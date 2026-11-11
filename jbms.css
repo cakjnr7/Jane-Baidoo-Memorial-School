@@ -1,6 +1,6 @@
 :root {
     --primary: #1f5a4d;
-    --secondary: #c98f1e;
+    --secondary: #978a71;
     --accent: #f2efe8;
     --forest: #102f25;
     --ink: #18332c;
@@ -235,7 +235,7 @@ textarea {
     border-radius: 28px;
     background: rgba(255,255,255,0.65);
     padding: 1rem;
-    box-shadow: 18px 18px 0 rgba(201, 143, 30, 0.38);
+    box-shadow: 18px 18px 0 rgb(141, 132, 114);
 }
 
 .hero-image {
@@ -405,7 +405,7 @@ textarea {
 .contact .eyebrow,
 .contact-details h2,
 .contact-list strong {
-    color: #f3d395;
+    color: #a59a85;
 }
 
 .contact-layout {
